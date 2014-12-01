@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="JCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RPy-zj-0UE"/>
+                        <viewControllerLayoutGuide type="bottom" id="FHM-dT-s6D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40v-7z-yu7">
+                                <rect key="frame" x="16" y="538" width="30" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImageLast" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0I1-H1-p6f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M66-bD-Ra4">
+                                <rect key="frame" x="196" y="538" width="108" height="30"/>
+                                <state key="normal" title="SwitchDirection">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeDirection" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UCf-BC-Xvg"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKQ-7C-3Rt" customClass="JCScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="530"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wKQ-7C-3Rt" secondAttribute="trailing" constant="-16" id="564-1J-9ma"/>
+                            <constraint firstItem="40v-7z-yu7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="BL0-lb-1Sm"/>
+                            <constraint firstItem="wKQ-7C-3Rt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Ean-dc-3CJ"/>
+                            <constraint firstItem="M66-bD-Ra4" firstAttribute="top" secondItem="wKQ-7C-3Rt" secondAttribute="bottom" constant="8" id="ITj-y1-BgF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M66-bD-Ra4" secondAttribute="trailing" id="Xbr-uB-0lp"/>
+                            <constraint firstItem="wKQ-7C-3Rt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="fAU-hw-FHa"/>
+                            <constraint firstItem="FHM-dT-s6D" firstAttribute="top" secondItem="M66-bD-Ra4" secondAttribute="bottom" id="fjg-1h-9fv"/>
+                            <constraint firstItem="FHM-dT-s6D" firstAttribute="top" secondItem="40v-7z-yu7" secondAttribute="bottom" id="tVy-Mo-KGH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="jcSV" destination="wKQ-7C-3Rt" id="JQR-AU-oEj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="270"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
